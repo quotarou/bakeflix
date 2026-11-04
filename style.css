@@ -1,0 +1,97 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #2b2b2b; background: #fffaf5; line-height: 1.5; }
+a { color: #8a3b12; }
+a:focus, button:focus, input:focus, select:focus { outline: 3px solid #1a5fb4; outline-offset: 2px; }
+
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+         padding: 12px 20px; background: #8a3b12; }
+header a { color: #fff; text-decoration: none; font-weight: bold; }
+.logo { font-size: 1.5rem; }
+header form { display: flex; gap: 6px; }
+
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 10px 20px; background: #f4dcc6; }
+nav a { text-decoration: none; font-weight: bold; }
+
+main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+footer { text-align: center; padding: 20px; color: #555; }
+
+.hero { text-align: center; padding: 40px 20px; background: #f4dcc6; border-radius: 10px; }
+.button, button { background: #8a3b12; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px;
+                  cursor: pointer; text-decoration: none; font-size: 1rem; display: inline-block; }
+input, select { padding: 7px; font-size: 1rem; }
+input[type=number] { width: 70px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; }
+.card { background: #fff; border: 1px solid #e6d2c0; border-radius: 10px; padding: 14px; text-align: center; }
+.card h3 { margin: 8px 0 2px; font-size: 1.05rem; }
+.category { text-decoration: none; color: inherit; }
+.thumb { font-size: 3rem; }
+.price { font-weight: bold; margin: 4px 0; }
+.muted { color: #555; font-size: .9rem; margin: 2px 0; }
+.in-stock { color: #1d6b2f; font-weight: bold; margin: 4px 0; }
+.out-stock { color: #b00020; font-weight: bold; }
+
+.sort-form { margin-bottom: 16px; }
+.notice { background: #e3f4e5; border: 1px solid #9ccfa3; padding: 10px; border-radius: 6px; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 12px; }
+th, td { padding: 10px; border-bottom: 1px solid #e6d2c0; text-align: left; }
+.summary { max-width: 320px; margin: 24px 0 0 auto; background: #fff; border: 1px solid #e6d2c0;
+           padding: 14px; border-radius: 10px; }
+.summary p { display: flex; justify-content: space-between; margin: 6px 0; }
+.summary .muted { display: block; }
+.grand { font-size: 1.2rem; border-top: 1px solid #e6d2c0; padding-top: 8px; }
+
+.sr-only { position: absolute; left: -9999px; }
+
+@media (max-width: 600px) { th:nth-child(2), td:nth-child(2) { display: none; } }
+
+.card h3 a { color: inherit; }
+.detail { display: grid; grid-template-columns: minmax(0, 600px) 1fr; gap: 24px; }
+.big-thumb { font-size: 8rem; text-align: center; background: #fff; border: 1px solid #e6d2c0; border-radius: 10px; padding: 20px; height: fit-content; }
+.price.big { font-size: 1.6rem; }
+
+.form { max-width: 520px; }
+.form label { display: block; margin-top: 12px; font-weight: bold; }
+.form label.inline { font-weight: normal; margin-top: 6px; }
+.form input[type=text], .form input[type=email], .form input[type=tel], .form input[type=password],
+.form input[type=number], .form textarea, .form select { width: 100%; }
+.form input[type=checkbox], .form input[type=radio] { width: auto; margin-right: 6px; }
+.form button { margin-top: 16px; }
+.errors { background: #fde7ea; border: 1px solid #e29aa5; color: #7a0014; padding: 10px; border-radius: 6px; max-width: 520px; }
+.errors ul { margin: 0; padding-left: 20px; }
+.summary.left { margin: 0 0 20px 0; }
+
+.scroll { overflow-x: auto; }
+.row { display: inline-block; margin: 2px 0; }
+.row input[type=number] { width: 80px; }
+button.danger { background: #b00020; }
+
+.grid > * { min-width: 0; }
+.card { overflow: hidden; }
+
+.card .thumb { font-size: 3rem; line-height: 1; margin-bottom: 8px; }
+
+.thumb-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detail { display: grid; grid-template-columns: minmax(0, 600px) 1fr; gap: 24px; }
+.big-thumb { font-size: 8rem; text-align: center; background: #fff; border: 1px solid #e6d2c0;
+             border-radius: 10px; padding: 12px; height: fit-content; }
+.detail-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+@media (max-width: 700px) { .detail { grid-template-columns: 1fr; } }
+
+.mini-img { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; vertical-align: middle; }
