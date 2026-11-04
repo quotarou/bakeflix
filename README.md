@@ -6,4 +6,6 @@ after setting up the xampp control panel, drop the contents of this folder into 
 
 import the file bakeflix.sql by clicking the new option on the http://localhost/phpmyadmin/index.php page
 
-after creating the database through importing, go to http://localhost/bakeflix/index.php to browse the contents of the website!
+after creating the database through importing, start apache and mysql in the xampp control panel
+
+finally, go to http://localhost/bakeflix/index.php to browse the contents of the website!
